@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cafe_graph"
+    app:startDestination="@id/cafeFavoriteFragment">
+
+    <fragment
+        android:id="@+id/cafeFavoriteFragment"
+        android:name="com.example.ec_final2.ui.fragments.CafeFavoriteFragment"
+        android:label="fragment_cafe_favorite"
+        tools:layout="@layout/fragment_cafe_favorite" >
+        <action
+            android:id="@+id/action_cafeFavoriteFragment_to_cafeDetailFragment2"
+            app:destination="@id/cafeDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cafeListFragment"
+        android:name="com.example.ec_final2.ui.fragments.CafeListFragment"
+        android:label="fragment_cafe_list"
+        tools:layout="@layout/fragment_cafe_list" >
+        <action
+            android:id="@+id/action_cafeListFragment_to_cafeDetailFragment2"
+            app:destination="@id/cafeDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cafeDetailFragment"
+        android:name="com.example.ec_final2.ui.fragments.CafeDetailFragment"
+        android:label="activity_cafe_detail_fragment"
+        tools:layout="@layout/activity_cafe_detail_fragment" >
+        <argument
+            android:name="cafe"
+            app:argType="com.example.ec_final2.model.Cafe" />
+
+</fragment>
+    <fragment
+        android:id="@+id/firestoreFragment"
+        android:name="com.example.ec_final2.ui.fragments.FirestoreFragment"
+        android:label="fragment_firestore"
+        tools:layout="@layout/fragment_firestore" />
+
+</navigation>
